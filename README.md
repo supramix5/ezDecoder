@@ -1,2 +1,2 @@
 # ezDecoder
-An utility to decode .csv and .toml files easily
+An utility to decode .csv, .toml and .bank files easily
