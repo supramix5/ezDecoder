@@ -85,7 +85,7 @@ namespace EzDecoder.App
             RainbowEffect();
 
             // Small Secret - Check for music file
-            string musicFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "assets", "music.mp3");
+            string musicFilePath = Utilities.Methods.GetMusicFile();
 
             if (File.Exists(musicFilePath))
             {
@@ -169,16 +169,16 @@ namespace EzDecoder.App
             switch (selectedMethod)
             {
                 case "Decode a CSV file":
-                    Utilities.methods.DecodeSingleCSV();
+                    Utilities.Methods.DecodeSingleCSV(false);
                     break;
                 case "Decode a TOML file":
-                    Utilities.methods.DecodeSingleTOML();
+                    Utilities.Methods.DecodeSingleTOML(false);
                     break;
                 case "Decode a BANK file":
-                    Utilities.methods.DecodeSingleBANK();
+                    Utilities.Methods.DecodeSingleBANK(false);
                     break;
                 case "Decode a directory":
-                    Utilities.methods.DecodeDirectory();
+                    Utilities.Methods.DecodeDirectory();
                     break;
                 default:
                     MessageBox.Show("Please select a valid method.");

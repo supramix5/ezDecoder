@@ -5,6 +5,8 @@
         <AssemblyName>ezDecoder</AssemblyName>
         <TargetFramework>net6.0-windows</TargetFramework>
         <UseWindowsForms>true</UseWindowsForms>
+        <PublishSingleFile>true</PublishSingleFile>
+        <TrimUnusedDependencies>true</TrimUnusedDependencies>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,10 +14,15 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         </None>
+        <None Update="config.toml">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="NAudio" Version="2.2.1" PrivateAssets="all" />
+        <PackageReference Include="NAudio" Version="2.2.1" />
+        <PackageReference Include="SevenZip" Version="19.0.0" />
     </ItemGroup>
 
 </Project>
